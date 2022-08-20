@@ -2,7 +2,7 @@
 # see https://butterfly.js.org/posts/4aa8abbe/#導航菜單
 # --------------------------------------
 
-#menu:
+menu:
   # Home: / || fas fa-home
   # Archives: /archives/ || fas fa-archive
   # Tags: /tags/ || fas fa-tags
@@ -12,7 +12,6 @@
   #   Movie: /movies/ || fas fa-video
   # Link: /link/ || fas fa-link
   # About: /about/ || fas fa-heart
-menu:
   主页: / || fas fa-home
   时间线: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
