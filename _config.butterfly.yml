@@ -83,14 +83,14 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /img/dolphin.png
 
 # Avatar (頭像)
 avatar:
   img: /img/favicon.png
   effect: false
 
-# Disable all banner image
+# Disable all banner imaged
 disable_top_img: false
 
 # The banner image of home page
@@ -894,6 +894,7 @@ inject:
 # 樱花飘落效果
     # - <script src="xxxx"></script>
     <script async src="https://npm.elemecdn.com/tzy-blog/lib/js/other/sakura.js"></script>
+    <script async src="//at.alicdn.com/t/c/font_3614417_11vonchvj81p.woff2?t=1661615210221"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they workhe
