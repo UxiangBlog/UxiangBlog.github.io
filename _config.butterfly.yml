@@ -13,7 +13,7 @@ menu:
   # Link: /link/ || fas fa-link
   # About: /about/ || fas fa-heart
   主页: / || fas fa-home
-  时间线: /archives/ || fas fa-archive
+  归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   链接||fas fa-list:
@@ -97,7 +97,7 @@ disable_top_img: false
 index_img:  /img/bg.png
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: img/ctgtags.png
 
 # The banner image of archive page
 archive_img:
@@ -521,7 +521,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: url(https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/743/bg.png)
 
 # Footer Background
 footer_bg: false
@@ -890,6 +890,8 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    # 自定义css,里面含有一图流样式
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
 # 樱花飘落效果
     # - <script src="xxxx"></script>
@@ -969,3 +971,43 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
+
+# 贡献日历
+# hexo-filter-gitcalendar
+# see https://akilar.top/posts/1f9c68c9/
+gitcalendar:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: / # 应用页面
+  # butterfly挂载容器
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  # volantis挂载容器
+  # layout:
+  #   type: class
+  #   name: l_main
+  #   index: 0
+  # matery挂载容器
+  # layout:
+  #   type: id
+  #   name: indexCard
+  #   index: 0
+  # mengd挂载容器
+  # layout:
+  #   type: class
+  #   name: content
+  #   index: 0
+  user: UxiangBlog #git用户名
+  apiurl: 'https://UxiangBlog.github.io'
+  minheight:
+    pc: 280px #桌面端最小高度
+    mibile: 0px #移动端最小高度
+  color: "['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06']" #橘黄色调
+  # color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']" #浅紫色调
+  # color: "['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620']" #翠绿色调
+  # color: "['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c']" #天青色调
+  container: .recent-post-item(style='width:100%;height:auto;padding:10px;') #父元素容器，需要使用pug语法
+  gitcalendar_css: https://cdn.cbd.int/hexo-filter-gitcalendar/lib/gitcalendar.css
+  gitcalendar_js: https://cdn.cbd.int/hexo-filter-gitcalendar/lib/gitcalendar.js
